@@ -1,0 +1,18 @@
+uniform sampler2D tex;
+uniform float rotacija;
+
+void main()
+{			
+	float rotRad = rotacija / 180 * 3.14;
+	
+	vec3 normala = texture2D(tex, gl_TexCoord[0].st).rgb;
+	vec3 out_normala;
+	
+	out_normala.x = cos(rotRad) * normala.x - sin(rotRad) * normala.y;
+	out_normala.y = sin(rotRad) * normala.x + cos(rotRad) * normala.y;
+	out_normala.z = normala.z;	
+	
+	out_normala = normalize(out_normala);
+	
+	gl_FragColor = vec4(out_normala.xyz, 1.0);	
+}

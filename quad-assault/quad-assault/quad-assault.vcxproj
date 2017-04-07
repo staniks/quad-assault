@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B4050037-6CC4-472D-B212-EAB9A43C5F12}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>quadassault</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;SFML_DYNAMIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>sfml-system-d.lib;sfml-main-d.lib;sfml-graphics-d.lib;sfml-audio-d.lib;sfml-network-d.lib;sfml-window-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)SFML2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)SFML2\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-system.lib;sfml-main.lib;sfml-graphics.lib;sfml-audio.lib;sfml-network.lib;sfml-window.lib;opengl32.lib;glu32.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Blok.cpp" />
+    <ClCompile Include="Cestica.cpp" />
+    <ClCompile Include="DimRakete.cpp" />
+    <ClCompile Include="Explozija.cpp" />
+    <ClCompile Include="GS_Init.cpp" />
+    <ClCompile Include="GS_Input.cpp" />
+    <ClCompile Include="GS_Izlaz.cpp" />
+    <ClCompile Include="GS_NizUpdate.cpp" />
+    <ClCompile Include="GS_Render.cpp" />
+    <ClCompile Include="GS_RenderFBO.cpp" />
+    <ClCompile Include="GS_UcitajMapu.cpp" />
+    <ClCompile Include="GS_Update.cpp" />
+    <ClCompile Include="GS_UpdateDev.cpp" />
+    <ClCompile Include="GS_VanjskiPristup.cpp" />
+    <ClCompile Include="GUI_Funkcije.cpp" />
+    <ClCompile Include="Igra.cpp" />
+    <ClCompile Include="Igrac.cpp" />
+    <ClCompile Include="IgracRender.cpp" />
+    <ClCompile Include="IgracUpdate.cpp" />
+    <ClCompile Include="KljucPickup.cpp" />
+    <ClCompile Include="Laser.cpp" />
+    <ClCompile Include="LaserMob1.cpp" />
+    <ClCompile Include="LaserProjektil.cpp" />
+    <ClCompile Include="Likovi.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ManagerTextura.cpp" />
+    <ClCompile Include="ManagerZvuka.cpp" />
+    <ClCompile Include="MenuGumb.cpp" />
+    <ClCompile Include="Minigun.cpp" />
+    <ClCompile Include="MinigunProjektil.cpp" />
+    <ClCompile Include="Mob.cpp" />
+    <ClCompile Include="MS_Init.cpp" />
+    <ClCompile Include="MS_Input.cpp" />
+    <ClCompile Include="MS_Izlaz.cpp" />
+    <ClCompile Include="MS_Render.cpp" />
+    <ClCompile Include="MS_Update.cpp" />
+    <ClCompile Include="Objekt.cpp" />
+    <ClCompile Include="Oruzje.cpp" />
+    <ClCompile Include="OruzjePickup.cpp" />
+    <ClCompile Include="Plazma.cpp" />
+    <ClCompile Include="PlazmaMob1.cpp" />
+    <ClCompile Include="PlazmaProjektil.cpp" />
+    <ClCompile Include="Poruka.cpp" />
+    <ClCompile Include="Projektil.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="SmeceCestica.cpp" />
+    <ClCompile Include="SmecePickup.cpp" />
+    <ClCompile Include="Stanje.cpp" />
+    <ClCompile Include="Stvar.cpp" />
+    <ClCompile Include="Svjetlo.cpp" />
+    <ClCompile Include="Trigger.cpp" />
+    <ClCompile Include="UI_Element.cpp" />
+    <ClCompile Include="UI_Gumb.cpp" />
+    <ClCompile Include="UI_Menager.cpp" />
+    <ClCompile Include="UI_Prozor.cpp" />
+    <ClCompile Include="Vec2.cpp" />
+    <ClCompile Include="ZajednickeVarijable.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Blok.h" />
+    <ClInclude Include="Cestica.h" />
+    <ClInclude Include="DimRakete.h" />
+    <ClInclude Include="Explozija.h" />
+    <ClInclude Include="GlavnoStanje.h" />
+    <ClInclude Include="GUI_Funkcije.h" />
+    <ClInclude Include="Igra.h" />
+    <ClInclude Include="Igrac.h" />
+    <ClInclude Include="KljucPickup.h" />
+    <ClInclude Include="Laser.h" />
+    <ClInclude Include="LaserMob1.h" />
+    <ClInclude Include="LaserProjektil.h" />
+    <ClInclude Include="Likovi.h" />
+    <ClInclude Include="ManagerTextura.h" />
+    <ClInclude Include="ManagerZvuka.h" />
+    <ClInclude Include="MenuGumb.h" />
+    <ClInclude Include="MenuStanje.h" />
+    <ClInclude Include="Minigun.h" />
+    <ClInclude Include="MinigunProjektil.h" />
+    <ClInclude Include="Mob.h" />
+    <ClInclude Include="Objekt.h" />
+    <ClInclude Include="Oruzje.h" />
+    <ClInclude Include="OruzjePickup.h" />
+    <ClInclude Include="Ovisnosti.h" />
+    <ClInclude Include="Plazma.h" />
+    <ClInclude Include="PlazmaMob1.h" />
+    <ClInclude Include="PlazmaProjektil.h" />
+    <ClInclude Include="Poruka.h" />
+    <ClInclude Include="Projektil.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="SmeceCestica.h" />
+    <ClInclude Include="SmecePickup.h" />
+    <ClInclude Include="Stanje.h" />
+    <ClInclude Include="Stvar.h" />
+    <ClInclude Include="Svjetlo.h" />
+    <ClInclude Include="Trigger.h" />
+    <ClInclude Include="UI_Element.h" />
+    <ClInclude Include="UI_Gumb.h" />
+    <ClInclude Include="UI_Menager.h" />
+    <ClInclude Include="UI_Prozor.h" />
+    <ClInclude Include="Vec2.h" />
+    <ClInclude Include="ZajednickeVarijable.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

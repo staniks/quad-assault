@@ -1,0 +1,35 @@
+preload_zvuk Zvukovi/blip.wav
+//muzika Zvukovi/Nivo1/Muzika1.ogg
+
+igrac 515 7682
+
+oruzje 687 7336 1
+oruzje 749 5986 0
+oruzje 749 5886 0
+oruzje 303 5355 2
+
+porukatrigger 1150 7232 1289 7439 Baza;Kod Q, nadji put prema dogovorenom mjestu izlaska.;6 Zvukovi/blip.wav
+
+mobtrigger 1150 7232 1289 7439 1198 7605 minigunmob1
+mobtrigger 627 7039 857 7127 677 6883 plazmamob1
+
+mobtrigger 624 6534 857 6700 426 6246 plazmamob1
+mobtrigger 624 6534 857 6700 600 6246 lasermob1
+mobtrigger 624 6534 857 6700 720 6246 plazmamob1
+
+mobtrigger 693 5766 765 5800 753 5557 lasermob1
+mobtrigger 431 5633 590 5697 488 5936 minigunmob1
+
+mobtrigger 95 5794 290 5881 173 5542 lasermob1
+mobtrigger 95 5794 290 5881 271 5542 lasermob1
+
+mobtrigger 671 5288 858 5456 1074 5236 lasermob1
+mobtrigger 671 5288 858 5456 1074 5356 plazmamob1
+mobtrigger 671 5288 858 5456 1074 5476 minigunmob1
+
+kljuc 1195 7790 2
+kljuc 340 6886 1
+kljuc 1455 5360 0
+
+porukatrigger 2023 6176 2263 6408 Baza;Kod Q, zadrzi trenutno poziciju, transport dolazi.;4 Zvukovi/blip.wav
+krajtrigger 2023 6176 2263 6408
